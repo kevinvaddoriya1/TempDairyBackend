@@ -21,18 +21,18 @@ connectDB();
 
 const app = express();
 
-app.use(cors({
-  origin: ['https://temp-dairy-frontend-qyxytfa2r-ksv4747-6108s-projects.vercel.app/'],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: ['https://temp-dairy-frontend-qyxytfa2r-ksv4747-6108s-projects.vercel.app/'],
+//   credentials: true
+// }));
 
-// Handle OPTIONS preflight requests explicitly
-app.options('*', cors({
-  origin: ['https://temp-dairy-frontend-qyxytfa2r-ksv4747-6108s-projects.vercel.app/'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'X-Requested-With', 'Accept'],
-  credentials: true,
-}));
+// // Handle OPTIONS preflight requests explicitly
+// app.options('*', cors({
+//   origin: ['https://temp-dairy-frontend-qyxytfa2r-ksv4747-6108s-projects.vercel.app/'],
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+//   allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'X-Requested-With', 'Accept'],
+//   credentials: true,
+// }));
 app.use(express.json());
 
 
