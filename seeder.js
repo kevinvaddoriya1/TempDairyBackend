@@ -27,4 +27,4 @@ const importData = async () => {
   }
 };
 
-export default importData();
+importData();
