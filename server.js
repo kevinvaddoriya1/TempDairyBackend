@@ -33,6 +33,13 @@ const app = express();
 //   allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'X-Requested-With', 'Accept'],
 //   credentials: true,
 // }));
+
+app.use(cors({
+  origin: "*",                  // allow all origins
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
 app.use(express.json());
 
 
