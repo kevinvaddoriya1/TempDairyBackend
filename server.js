@@ -13,6 +13,7 @@ import quantityUpdateRoutes from './routes/quantityUpdateRoutes.js'
 import scheduleDailyRecords from './utils/cronJobs.js'
 import invoiceRoutes from './routes/invoiceRoutes.js';
 import systemConfigRoutes from './routes/systemConfigRoutes.js';
+import importData from './seeder.js';
 // Add this line
 
 dotenv.config();
@@ -57,6 +58,8 @@ app.use('/api/config', systemConfigRoutes);
 scheduleDailyRecords();
 
 app.get('/', (req, res) => {
+
+  importData();
   res.send('API is running...');
 });
 const PORT = process.env.PORT || 5000;
